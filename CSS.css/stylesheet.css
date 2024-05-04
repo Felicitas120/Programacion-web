@@ -1,0 +1,237 @@
+
+body {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color:#ffffff;
+    color:#77BC9E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 0px;
+    font-size: medium;
+}
+.logo img {
+    height: 110px; 
+    width: 120px;
+    margin-bottom: -4px;
+    
+}
+.menu {
+    list-style-type: none;
+    margin: 0;
+    margin: 0;
+    display: flex;
+    text-decoration: none;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 15px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.menu ul li {
+    margin-left: 20px;
+}
+.menu li:not(last-child) {
+    margin-right: 20px;
+}
+.menu ul li a {
+    color: #77BC9E;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #FDB3A4;
+}
+.search {
+  position: relative;
+  display: flex;
+  align-items:end;
+}
+
+.search input[type="text"] {
+  padding: 8px;
+  border: none; 
+  border-radius: 20px;
+  background-color: #a5ffb8;
+  font-size: 16px;
+}
+
+.search button {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.image {
+    height: 500px;
+    background-image: url("/imagenes/i1.jpeg");
+    background-position:center;
+    background-size: cover; 
+    position: relative;
+}
+.title {
+    text-align: center;
+    padding-top: 5px;
+}
+.title h1 {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 125px;
+    color: #ff937e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
+}
+#Title {
+    cursor: pointer;
+    font-size: 200;
+}
+.highlight {
+    animation: highlight 0,8s ease;
+}
+.title p {
+    font-size: 20px;
+    color:#0a7567;
+    background-color: rgba(253, 179, 164, 0.5);
+    padding: 5px;
+    border-radius: 20px;
+}
+.grid-conteiner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color:#fafffd;
+}
+.grid-item {
+    text-align: center;
+}
+.grid-item img {
+    width: 270px;
+    height: 270px;
+    margin-top: 20px;
+}
+.grid-item button{
+    margin-top: 10px;
+    padding: 5px 10px;
+    color:#77BC9E;
+    background-color: #fafffd;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.grid-item button:hover {
+    color: #FDB3A4;
+}
+@media screen  and (max-width: 768px) {
+    header{
+        font-size: small;
+        height: 75px;
+    }
+    .logo img {
+        height: 55px; 
+        width: 60px;
+        margin-bottom: -4px;
+        
+    }
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        text-decoration: none;
+    }
+    .menu ul {
+        list-style-type: none;
+        padding: 10px;
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+    }
+    .menu li:not(last-child) {
+        margin-right: 3px;
+    }
+    .search {
+        position: end;
+        display: flex;
+        align-items:center;
+    }
+      
+    .search input[type="text"] {
+        padding: 2px;
+        border: none; 
+        border-radius: 8px;
+        background-color: #a5ffb8;
+        font-size: 8px;
+    }
+      
+    .search button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .image {
+        height: 250px;
+        background-image: url("/imagenes/i1.jpeg");
+        background-position:center;
+        background-size: cover; 
+        position: relative;
+    }
+    .title {
+        display: flex;
+    }
+    .title h1 {
+        font-family: "Cedarville Cursive", cursive;
+        font-weight: 400;
+        font-size: 40px;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+    .title p {
+        font-size: 10px;
+        color:#0a7567;
+        background-color: rgba(253, 179, 164, 0.5);
+        padding: 2px;
+        border-radius: 20px;
+    
+    }
+    .grid-conteiner{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid-item img {
+        width: 145px;
+        height: 145px;
+        margin-top: 10px;
+    }
+    .grid-item button{
+        margin-top: 5px;
+        padding: 5px 10px;
+        color:#77BC9E;
+        background-color: #fafffd;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    .grid-item button:hover {
+        color: #FDB3A4;
+    }
+}
+
+@keyframes highlight {
+    0% {
+      background-color: #007bff;
+      color: #fff;
+    }
+    50% {
+      background-color: #fff;
+      color: #007bff;
+    }
+    100% {
+      background-color: #007bff;
+      color: #fff;
+    }
+  }
