@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="nuevo-valor-de-integridad" crossorigin="anonymous">
     </head>
     <body>
         <header>
@@ -17,8 +17,11 @@
                     <img src="imagenes/LogoMK.jpeg" alt="Logo">
                 </a>
             </div>
-            <nav class="menu">
-                <ul class="menu">
+            <nav class="menu-list">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i> 
+                </div>
+                <ul class="menu-list">
                     <li><a href="/CSS.css/stylesheet.css">Inicio de sesión</a></li>
                     <li><a href="/Paginas.html/Productos.html">Productos</a></li>
                     <li><a href="/Paginas.html/Carrito.html">Carrito</a></li> 
@@ -89,8 +92,16 @@
             </div>
 
         </div>
+        <div class="Calculadoras">
+            <div class="Cal-Tortas"></div>
+            <div class="Cal-Tar"></div>
+        </div>
         <footer>
-
+            <div class="footer">
+                <div>Medios de Contanto</div>
+                <div>medios de Pago</div>
+                <div>Ubicación</div>
+            </div>
         </footer>
         
         <!--Hacer un head donde tenga, logo(con link que lleve al inicio), iniciar sesion/registrarse,
@@ -100,6 +111,27 @@
         <!--Hacer una seccion donde aparezca la localizacion en el mapa-->
         <!--Hacer un Footer donde tenga contacto, medios de pago, envios y politicas de servivios-->
         <!-- hace un calculadora que segun las personas te diga el peso de la torta y otro las puciones de tartas que salen-->
-        <script src="script.js"></script>
+        <script>
+            function initMap() {
+  
+            var coordenadas = decodeURIComponent('https://maps.app.goo.gl/3Trq6wPN3mr1DGeL6').split("/").pop().split(",");
+              
+            var latitud = parseFloat(coordenadas[0]);
+            var longitud = parseFloat(coordenadas[1]);
+              
+            var opcionesMapa = {
+                zoom: 10,
+                center: { lat: latitud, lng: longitud }
+            };
+              
+            var mapa = new google.maps.Map(document.getElementById('map'), opcionesMapa);
+              
+            var marcador = new google.maps.Marker({
+                position: { lat: latitud, lng: longitud },
+                map: mapa,
+                title: 'Ubicación'
+                });
+            }
+        </script>
     </body>
     </html>

@@ -18,27 +18,27 @@ header{
     margin-bottom: -4px;
     
 }
-.menu {
+.menu-list {
     list-style-type: none;
     margin: 0;
     margin: 0;
     display: flex;
     text-decoration: none;
 }
-.menu ul {
+.menu-list ul {
     list-style-type: none;
     padding: 15px;
     display: flex;
     font-size: 20px;
     align-items: center;
 }
-.menu ul li {
+.menu-list ul li {
     margin-left: 20px;
 }
-.menu li:not(last-child) {
+.menu-list li:not(last-child) {
     margin-right: 20px;
 }
-.menu ul li a {
+.menu-list ul li a {
     color: #77BC9E;
     text-decoration: none;
     transition: color 0.3s;
@@ -115,50 +115,50 @@ nav ul li a:hover {
 .grid-item button{
     margin-top: 10px;
     padding: 5px 10px;
-    color:#77BC9E;
     background-color: #fafffd;
-    border: none;
-    cursor: pointer;
     font-size: 20px;
+    border: 1px solid #a5ffb8;
     vertical-align: middle;
+}
+.grid-item button a {
+    padding: 5px 10px;
     text-decoration: none;
+    cursor: pointer;
+    color:#77BC9E;
 }
 .grid-item button:hover {
+    border: none;
+}
+.grid-item button:hover a {
     color: #FDB3A4;
+    background-color: #fff2f0;
 }
 @media screen  and (max-width: 768px) {
     header{
-        font-size: small;
+        font-size: smaller;
         height: 75px;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .logo img {
-        height: 55px; 
-        width: 60px;
+        height: 75px; 
+        width: 80px;
         margin-bottom: -4px;
         
     }
-    .menu {
-        list-style-type: none;
-        margin: 0;
-        display: flex;
-        text-decoration: none;
+    .menu-list {
+        display: none;
     }
-    .menu ul {
-        list-style-type: none;
-        padding: 10px;
-        display: flex;
-        font-size: 10px;
-        align-items: center;
-    }
-    .menu li:not(last-child) {
-        margin-right: 3px;
-    }
+    .menu-icon {
+        cursor: pointer;
+        font-size: 24px;
+        color: #77BC9E; 
+    }    
     .search {
-        position: end;
+        position:relative;
         display: flex;
         align-items:center;
     }
-      
     .search input[type="text"] {
         padding: 2px;
         border: none; 
@@ -166,28 +166,26 @@ nav ul li a:hover {
         background-color: #a5ffb8;
         font-size: 8px;
     }
-      
     .search button {
         background-color: transparent;
         border: none;
         cursor: pointer;
     }
     .image {
-        height: 250px;
+        height: 200px;
+        width: auto;
         background-image: url("/imagenes/i1.jpeg");
         background-position:center;
         background-size: cover; 
         position: relative;
     }
-    .title {
-        display: flex;
-    }
     .title h1 {
         font-family: "Cedarville Cursive", cursive;
         font-weight: 400;
-        font-size: 40px;
-        padding-right: 10px;
+        font-size: 45px;
+        padding-right: 5px;
         padding-left: 5px;
+        border-top: 20px;
     }
     .title p {
         font-size: 10px;
@@ -198,40 +196,20 @@ nav ul li a:hover {
     
     }
     .grid-conteiner{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
     }
     .grid-item img {
-        width: 145px;
-        height: 145px;
+        width: 85%;
+        height: 180px;
         margin-top: 10px;
+        text-align: center;
     }
     .grid-item button{
         margin-top: 5px;
         padding: 5px 10px;
-        color:#77BC9E;
-        background-color: #fafffd;
-        border: none;
-        cursor: pointer;
         font-size: 15px;
-        vertical-align: middle;
-        text-decoration: none;
     }
     .grid-item button:hover {
         color: #FDB3A4;
     }
 }
-
-@keyframes highlight {
-    0% {
-      background-color: #007bff;
-      color: #fff;
-    }
-    50% {
-      background-color: #fff;
-      color: #007bff;
-    }
-    100% {
-      background-color: #007bff;
-      color: #fff;
-    }
-  }
