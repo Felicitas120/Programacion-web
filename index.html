@@ -1,109 +1,154 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meraki Pasteleria</title>
-        <link rel="stylesheet" href="/CSS.css/stylesheet.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="nuevo-valor-de-integridad" crossorigin="anonymous">
-    </head>
-    <body>
-        <header>
-            <div class="logo"> 
-                <a href="/CSS.css/stylesheet.css">
-                    <img src="imagenes/LogoMK.jpeg" alt="Logo">
-                </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki Pasteleria</title>
+    <link rel="stylesheet" href="/CSS.css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="nuevo-valor-de-integridad" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Inicio de sesion</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Nosotras</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Buscador</a></li>
+            </ul>
+            <ul>
+                <li class="Logo"><img src="/imagenes/LogoMK.jpeg" alt="Logo"></a></li>
+                <li class="hideOnMobile"><a href="#">Inicio de sesion</a></li>
+                <li class="hideOnMobile"><a href="#">Productos</a></li>
+                <li class="hideOnMobile"><a href="#">Nosotras</a></li>
+                <li class="hideOnMobile"><a href="#">Compras</a></li>
+                <li class="hideOnMobile"><a href="#">Buscador</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="image">
+        <div class="title">
+            <h1 id="Title">Meraki Pasteleria</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem ipsa voluptas voluptatem in quia, dignissimos repudiandae totam, ullam nostrum laborum, officia delectus qui natus ea sed! Facilis laboriosam expedita temporibus?</p>
+        </div>
+    </div>
+    <div class="grid-conteiner">
+        <div class="grid-item">
+            <img src="/imagenes/TorPer.jpeg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/TortasPersonalizadas.html">Personalizadas</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Tortas.jpg" alt="Tortas">
+            <button><a href="/Paginas.html/Tortas.html">Tortas</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Tartas.jpeg" alt="Tartas">
+            <button><a href="/Paginas.html/Tartas.html">Tartas</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Alfajores.jpg" alt="Alfajores">
+            <button><a href="/Paginas.html/Alfajores.html">Alfajores</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Shotsdulces.jpeg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/ShotsDulces.html">Shots Dulces</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/dia de la madre.jpeg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/DiadelPadre.html">Día de la madre</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Dia del padre.jpeg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/DiadelPadre.html">Día del Padre</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/San Valentin.jpg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/SanValentin.html">San Valentin</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Huevos.jpg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/Pascuas.html">Pascuas</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/Budines.jpg" alt="Buidnes">
+            <button><a href="/Paginas.html/Budines.html">Budines</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/CandyBar.jpeg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/CandyBar.html">Candy Bar</a></button>
+        </div>
+        <div class="grid-item">
+            <img src="/imagenes/TrabajosRealizados.jpeg" alt="Tortas Personalizadas">
+            <button><a href="/Paginas.html/TrabosRealizados.html">Trabajos Realizados</a></button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer1">
+            <div class="titlefooter">
+                <h1>Seguinos en Nuestras Redes</h1>
             </div>
-            <nav class="menu-list">
-                <div class="menu-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i> 
-                </div>
-                <ul class="menu-list">
-                    <li><a href="/CSS.css/stylesheet.css">Inicio de sesión</a></li>
-                    <li><a href="/Paginas.html/Productos.html">Productos</a></li>
-                    <li><a href="/Paginas.html/Carrito.html">Carrito</a></li> 
-                    <li><a href="/Paginas.html/Politicas.html">Politicas</a></li>
-                    <li><a href="/Paginas.html/Contacto.html">Contacto</a></li>
-                </ul>
-                <ul class="search">
-                    <input type="text" placeholder="Buscar">
-                    <a href="/CSS.css/stylesheet.css"><button type="sumbit">&#128269;</button></a>
-                </ul>
-            </nav>
-        </header>
-            <div class="image">
-                    <div class="title">
-                      <h1 id="Title">Meraki Pasteleria</h1>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem ipsa voluptas voluptatem in quia, dignissimos repudiandae totam, ullam nostrum laborum, officia delectus qui natus ea sed! Facilis laboriosam expedita temporibus?</p>
+            <div class="redes">
+                <i class="bi bi-facebook "></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-tiktok"></i>
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="container-footer">
+                <div class="columnas">
+                    <div class="col">
+                        <h1>Nosotras</h1>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
                     </div>
+                    <div class="col">
+                        <h1>Contacto</h1>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                    </div>
+                    <div class="col">
+                        <h1>Ayuda</h1>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                    </div>
+                    <div class="col">
+                        <h1>Contacto</h1>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                        <p>lorem</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="grid-conteiner">
-            <div class="grid-item">
-                <img src="/imagenes/TorPer.jpeg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/TortasPersonalizadas.html">Personalizadas</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Tortas.jpg" alt="Tortas">
-                <button><a href="/Paginas.html/Tortas.html">Tortas</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Tartas.jpeg" alt="Tartas">
-                <button><a href="/Paginas.html/Tartas.html">Tartas</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Alfajores.jpg" alt="Alfajores">
-                <button><a href="/Paginas.html/Alfajores.html">Alfajores</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Shotsdulces.jpeg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/ShotsDulces.html">Shots Dulces</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/dia de la madre.jpeg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/DiadelPadre.html">Día de la madre</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Dia del padre.jpeg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/DiadelPadre.html">Día del Padre</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/San Valentin.jpg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/SanValentin.html">San Valentin</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Huevos.jpg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/Pascuas.html">Pascuas</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/Budines.jpg" alt="Buidnes">
-                <button><a href="/Paginas.html/Budines.html">Budines</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/CandyBar.jpeg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/CandyBar.html">Candy Bar</a></button>
-            </div>
-            <div class="grid-item">
-                <img src="/imagenes/TrabajosRealizados.jpeg" alt="Tortas Personalizadas">
-                <button><a href="/Paginas.html/TrabosRealizados.html">Trabajos Realizados</a></button>
-            </div>
-
-        </div>
-        <div class="Calculadoras">
-            <div class="Cal-Tortas"></div>
-            <div class="Cal-Tar"></div>
-        </div>
-        <footer>
-            <div class="footer">
-                <div>Medios de Contanto</div>
-                <div>medios de Pago</div>
-                <div>Ubicación</div>
-            </div>
-        </footer>
-        
+    </footer>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "flex"
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "none"
+        }
+    </script>
         <!--Hacer un head donde tenga, logo(con link que lleve al inicio), iniciar sesion/registrarse,
             carrito,buscador-->
         <!--Poner imagen debajo del titulo y que corra mostrando productos y tenga un breve descripcion-->
@@ -111,27 +156,6 @@
         <!--Hacer una seccion donde aparezca la localizacion en el mapa-->
         <!--Hacer un Footer donde tenga contacto, medios de pago, envios y politicas de servivios-->
         <!-- hace un calculadora que segun las personas te diga el peso de la torta y otro las puciones de tartas que salen-->
-        <script>
-            function initMap() {
-  
-            var coordenadas = decodeURIComponent('https://maps.app.goo.gl/3Trq6wPN3mr1DGeL6').split("/").pop().split(",");
-              
-            var latitud = parseFloat(coordenadas[0]);
-            var longitud = parseFloat(coordenadas[1]);
-              
-            var opcionesMapa = {
-                zoom: 10,
-                center: { lat: latitud, lng: longitud }
-            };
-              
-            var mapa = new google.maps.Map(document.getElementById('map'), opcionesMapa);
-              
-            var marcador = new google.maps.Marker({
-                position: { lat: latitud, lng: longitud },
-                map: mapa,
-                title: 'Ubicación'
-                });
-            }
-        </script>
-    </body>
-    </html>
+        
+</body>
+</html>

@@ -1,70 +1,70 @@
-
-body {
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-header{
-    background-color:#ffffff;
-    color:#77BC9E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px 0px 0px;
-    font-size: medium;
-}
-.logo img {
-    height: 110px; 
-    width: 120px;
-    margin-bottom: -4px;
-    
-}
-.menu-list {
-    list-style-type: none;
+* {
     margin: 0;
-    margin: 0;
-    display: flex;
-    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
 }
-.menu-list ul {
-    list-style-type: none;
-    padding: 15px;
+body{
+    background-color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+}
+.Logo img {
+    width: 95px;
+    height: auto;
+}
+nav {
+    background-color:white;
+    box-shadow: 3px 10px 5px rgba(0,0,0,0.5);
+    height: 90px;
+}
+nav ul {
+    width: 100%;
+    list-style: none;
     display: flex;
-    font-size: 20px;
+    justify-content: flex-end;
     align-items: center;
 }
-.menu-list ul li {
-    margin-left: 20px;
+nav li{
+    height: 90px;
+    font-size: 18px;
 }
-.menu-list li:not(last-child) {
-    margin-right: 20px;
-}
-.menu-list ul li a {
-    color: #77BC9E;
+nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    color: black;
 }
-nav ul li a:hover {
-    color: #FDB3A4;
+nav a:hover {
+    color: #ff937e;
 }
-.search {
-  position: relative;
-  display: flex;
-  align-items:end;
+nav :first-child {
+    margin-right: auto;
 }
-
-.search input[type="text"] {
-  padding: 8px;
-  border: none; 
-  border-radius: 20px;
-  background-color: #a5ffb8;
-  font-size: 16px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:rgba(255, 228, 196, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
-
-.search button {
-  padding: 5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.slider li {
+    width: 100%;
+}
+.sliderbar a {
+    width: 100%;
+}
+.menu-button {
+    display: none;
 }
 .image {
     height: 500px;
@@ -75,22 +75,17 @@ nav ul li a:hover {
 }
 .title {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 20px;
 }
 .title h1 {
     font-family: "Cedarville Cursive", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 125px;
+    font-size: 107px;
+    padding-top: 100px;
+    padding-bottom: 30px;
     color: #ff937e;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
-}
-#Title {
-    cursor: pointer;
-    font-size: 200;
-}
-.highlight {
-    animation: highlight 0,8s ease;
 }
 .title p {
     font-size: 20px;
@@ -101,14 +96,14 @@ nav ul li a:hover {
 }
 .grid-conteiner{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     background-color:#fafffd;
 }
 .grid-item {
     text-align: center;
 }
 .grid-item img {
-    width: 270px;
+    width: 90%;
     height: 270px;
     margin-top: 20px;
 }
@@ -116,15 +111,17 @@ nav ul li a:hover {
     margin-top: 10px;
     padding: 5px 10px;
     background-color: #fafffd;
-    font-size: 20px;
-    border: 1px solid #a5ffb8;
+    font-size: 18px;
+    border: none;
     vertical-align: middle;
 }
 .grid-item button a {
     padding: 5px 10px;
     text-decoration: none;
     cursor: pointer;
-    color:#77BC9E;
+    color: black;
+    text-decoration: underline 2px;
+    font-family:'Times New Roman', Times, serif;
 }
 .grid-item button:hover {
     border: none;
@@ -133,47 +130,71 @@ nav ul li a:hover {
     color: #FDB3A4;
     background-color: #fff2f0;
 }
+.footer1 {
+    display: grid;
+    background-color: #ffe6e1;
+    grid-template-columns: auto;
+    height: 300px;
+    width: 100%;
+}
+.titlefooter h1 {
+    font-family: "Cedarville Cursive", cursive;
+    text-decoration: underline 2px;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
+}
+.redes {
+    display: flex;
+    justify-content: center;
+}
+.redes i {
+    font-size: 25px;
+    padding-right: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
+}
+.footer2 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    height: 300px;
+}
+.columnas {
+    display: flex;
+    justify-content: center;
+}
+.col h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+    padding-bottom: 25px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.col {
+    font-family: 'Times New Roman', Times, serif;
+    vertical-align: middle;
+    text-align: center;
+}
 @media screen  and (max-width: 768px) {
     header{
         font-size: smaller;
-        height: 75px;
-        flex-direction: column;
-        align-items: flex-start;
+        height: 85px;
     }
-    .logo img {
-        height: 75px; 
-        width: 80px;
-        margin-bottom: -4px;
-        
-    }
-    .menu-list {
+    .hideOnMobile{
         display: none;
     }
-    .menu-icon {
-        cursor: pointer;
-        font-size: 24px;
-        color: #77BC9E; 
-    }    
-    .search {
-        position:relative;
-        display: flex;
-        align-items:center;
+    .menu-button {
+        display: block;
     }
-    .search input[type="text"] {
-        padding: 2px;
-        border: none; 
-        border-radius: 8px;
-        background-color: #a5ffb8;
-        font-size: 8px;
-    }
-    .search button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+    .sidebar {
+        width: 100%;
     }
     .image {
-        height: 200px;
-        width: auto;
+        height: 225px;
+        width: 100%;
         background-image: url("/imagenes/i1.jpeg");
         background-position:center;
         background-size: cover; 
@@ -182,10 +203,10 @@ nav ul li a:hover {
     .title h1 {
         font-family: "Cedarville Cursive", cursive;
         font-weight: 400;
-        font-size: 45px;
+        font-size: 40px;
         padding-right: 5px;
         padding-left: 5px;
-        border-top: 20px;
+        padding-top: 20px;
     }
     .title p {
         font-size: 10px;
@@ -193,10 +214,11 @@ nav ul li a:hover {
         background-color: rgba(253, 179, 164, 0.5);
         padding: 2px;
         border-radius: 20px;
+        padding-bottom: 5px;
     
     }
     .grid-conteiner{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr;
     }
     .grid-item img {
         width: 85%;
@@ -212,4 +234,38 @@ nav ul li a:hover {
     .grid-item button:hover {
         color: #FDB3A4;
     }
+    .footer1 {
+        height: auto;
+    }
+    .titlefooter h1 {
+        font-size: 25px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    .redes i {
+        font-size: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+    .footer2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+    }
+    .columnas {
+        display:grid;
+        justify-content: center;
+    }
+    .col h1 {
+        padding-top: 30px;
+        padding-bottom: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    .col p{
+        font-size: 17px;
+    }
+    
 }
